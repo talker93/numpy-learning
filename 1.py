@@ -7,11 +7,6 @@ Created on Thu Oct 14 09:12:52 2021
 """
 
 import numpy as np
-import sys
-import os
-
-
-
 
 
 if __name__ == '__main__':
