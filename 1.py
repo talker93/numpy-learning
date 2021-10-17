@@ -6,6 +6,8 @@ Created on Thu Oct 14 09:12:52 2021
 @author: shanjiang
 """
 
+# https://www.youtube.com/watch?v=QUT1VHiLmmI
+
 import numpy as np
 
 
@@ -13,6 +15,7 @@ if __name__ == '__main__':
     # basic
     # never use a = b, but use a = b.copy()
     a = np.ones((5, 5))
+    a10 = np.ones(10)
     a1 = a.copy()
     a1[0] = 100
     # randint for integers, rand for float 0~1
@@ -60,6 +63,8 @@ if __name__ == '__main__':
     print("i4", i4)
     print("i5", i5)
     print("i6", i6)
+    i7 = np.zeros((1, 2))
+    i8 = np.concatenate((i7, i5), axis=0)
     
     # min & max
     j1 = np.array([[1,2,3],[4,5,6]])
@@ -68,6 +73,15 @@ if __name__ == '__main__':
     j4 = np.max(j1)
     j5 = np.max(j1, axis=1)
     j6 = np.sum(j1[0,:])
+    j7 = np.diff(j1, axis=0)
+    j8 = np.sum(j1, axis=1)
+    j9 = np.sum(j1)
+    for j10, j11 in enumerate(j1):
+        print("j10", j10)
+        print("j11", j11)
+        for j12, j13 in enumerate(j11):
+            print("j12", j12)
+            print("j13", j13)
     
     # reorganize
     k1 = np.array([[1,2,3,4],[5,6,7,8]])
