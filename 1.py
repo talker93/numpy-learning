@@ -114,14 +114,25 @@ if __name__ == '__main__':
     print("l[1,2,3]", l[[1,2,3]])
     
     # example 2
+    m5 = np.arange(31)
     m = np.arange(1, 31)
     m1 = m.reshape(6, 5)
     print("m1", m1)
     # how to index
     m2 = m1[2:4, 0:2]
     m3 = m1[[0,1,2,3], [1,2,3,4]]
-    m4 = m1[[0, 4, 5], 3:6]
+    m4 = m1[[0, 4, 5], 3:5]
     print("m2", m2)
     print("m3", m3)
     print("m4", m4)
+    
+    n = np.histogram([1,2,1], bins=[0,1,2,3])
+    print("n", n)
+    n1 = np.histogram(np.arange(4), bins=np.arange(5), density=True)
+    print("n1", n1)
+    n2 = np.arange(5)
+    hist, bin_edges = np.histogram(n2, density=True)
+    print("hist", hist)
+    
+    # funcs remain to be practiced: np.flatten, np.subtract
     
